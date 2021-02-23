@@ -19,7 +19,7 @@
 
 - To run the app enter the following command in the terminal.
 
-- node script
+- node server
 
 ## Usage
 
