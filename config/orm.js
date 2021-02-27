@@ -45,43 +45,35 @@ var orm = {
       cb(result);
     });
   },
-  create: function (table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + table;
+  create: function (table, reqBody, cb) {
+    var statement = connection.query(
+      "insert into ?? set ?",
+      [table, reqBody],
+      function (err, result) {
+        if (err) {
+          throw err;
+        }
 
-    queryString += " (";
-    queryString += cols.toString();
-    queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
-
-    console.log(queryString);
-
-    connection.query(queryString, vals, function (err, result) {
-      if (err) {
-        throw err;
+        cb(result);
       }
+    );
 
-      cb(result);
-    });
+    console.log(statement.sql);
   },
   // An example of objColVals would be {name: panther, sleepy: true}
-  update: function (table, objColVals, condition, cb) {
-    var queryString = "UPDATE " + table;
+  update: function (table, reqBody, condition, cb) {
+    var statement = connection.query(
+      `update ?? set ? where ? `,
+      [table, reqBody, condition],
+      function (err, result) {
+        if (err) {
+          throw err;
+        }
 
-    queryString += " SET ";
-    queryString += objToSql(objColVals);
-    queryString += " WHERE ";
-    queryString += condition;
-
-    console.log(queryString);
-    connection.query(queryString, function (err, result) {
-      if (err) {
-        throw err;
+        cb(result);
       }
-
-      cb(result);
-    });
+    );
+    console.log(statement.sql);
   },
   delete: function (table, condition, cb) {
     var queryString = "DELETE FROM " + table;
