@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   list-style: none;
-  background-color: rgb(243, 176, 117);
+  background-color: rgb(240, 171, 110);
 }
 
 li {

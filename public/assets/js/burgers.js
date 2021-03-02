@@ -1,5 +1,14 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
+  $(".remove-burgers").on("click", function () {
+    var id = $(this).data("id");
+    $.ajax("/api/burgers/" + id, {
+      type: "DELETE",
+    }).then(function () {
+      location.reload();
+    });
+  });
+
   $(".change-burgers").on("click", function (event) {
     var id = $(this).data("id");
 
@@ -38,7 +47,7 @@ $(function () {
     });
   });
 
-  $(".delete-burger").on("click", function (event) {
+  $(".delete-burgers").on("click", function (event) {
     var id = $(this).data("id");
 
     // Send the DELETE request.
