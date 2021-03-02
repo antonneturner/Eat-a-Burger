@@ -33,7 +33,7 @@
 
 ## Screenshot
 
-![image](https://user-images.githubusercontent.com/71462708/109590264-acc4c280-7ad9-11eb-9e4b-8b603d1f5e2b.png)
+![image](https://user-images.githubusercontent.com/71462708/109590453-062cf180-7ada-11eb-9210-ee6b1e782fa4.png)
 
 ## License
 
