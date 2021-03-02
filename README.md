@@ -2,14 +2,20 @@
 
 ## Description
 
+- Users will be able to dynamically add or eat the burger or burgers of their choice.
+
 ## Features
+
+- Shows list of selectable burgers that the user can add, delete or eat from the homepage.
 
 ## Technologies
 
-- inquirer
-- javascript
-- node
-- mySQL
+- Express
+- Javascript
+- Node
+- MySQL
+- Handlebars
+- ORM
 
 ## Installation
 
@@ -23,7 +29,11 @@
 
 ## Usage
 
+- This app is for dynamically generating burgers.
+
 ## Screenshot
+
+![image](https://user-images.githubusercontent.com/71462708/109590264-acc4c280-7ad9-11eb-9e4b-8b603d1f5e2b.png)
 
 ## License
 
